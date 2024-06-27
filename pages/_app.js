@@ -17,6 +17,7 @@ import { getQueryParam } from '../lib/utils'
 import BLOG from '@/blog.config'
 import ExternalPlugins from '@/components/ExternalPlugins'
 import GlobalHead from '@/components/GlobalHead'
+import { SpeedInsights } from '@vercel/speed-insights/next';
 
 /**
  * App挂载DOM 入口文件
@@ -51,6 +52,7 @@ const MyApp = ({ Component, pageProps }) => {
       <GLayout {...pageProps}>
         <GlobalHead {...pageProps} />
         <Component {...pageProps} />
+        <SpeedInsights />
       </GLayout>
       <ExternalPlugins {...pageProps} />
     </GlobalContextProvider>
